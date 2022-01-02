@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    padding: 0;
+    margin: 10px;
+    max-height: 100vh;
+    background-color: #333565;
+    border: 6px dashed #1a1b32;
+    color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sprite-container {
+    position: relative;
+    height: 203px;
+    width: 221px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.sprite-container.overflow-active {
+    overflow: visible;
+    opacity: 0.2;
+}
+
+.sprite-container.overflow-active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid #00ff00;
+    height: 100%;
+    width: 100%;
+}
+
+.sprite-container.mirrored {
+    transform: scaleX(-1);
+}
+
+.button {
+    display: inline-block;
+    margin: 3px;
+    padding: 10px 15px;
+    background: #1a1b32;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+}
+
+.button.disabled,
+.button:disabled {
+    background-color: #2a2b52;
+    color: #adadad;
+    cursor: not-allowed;
+}
+
+.button:not(.disabled).active,
+.button:not(.disabled):active {
+    transform: scale(1.15);
+}
+
+.controls > .row {
+    display: flex;
+    justify-content: center;
+}
+
+.fps-slider {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.fps-slider input {
+    margin: 3px 10px 0;
+}
+
+@media only screen and (max-width: 576px) {
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Character movement</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+<main>
+    <h1>character sprite sheet animation</h1>
+    <div class="sprite-container">
+        <img class="sprite" src="sprite.png" alt="sprite">
+    </div>
+    <h2>controls</h2>
+    <div class="controls">
+        <div class="row">
+            <button type="button" class="button die">die</button>
+            <button type="button" class="button up">&#8593;</button>
+            <button type="button" class="button run">run</button>
+        </div>
+        <div class="row">
+            <button type="button" class="button left">&#8592;</button>
+            <button type="button" class="button down disabled" disabled>&#8595;</button>
+            <button type="button" class="button right">&#8594;</button>
+        </div>
+        <div class="row">
+            <button type="button" class="button overflow">toggle overflow</button>
+        </div>
+        <div class="row">
+            <div class="fps-slider">
+                <label for="fps">fps</label>
+                <input id="fps" value="30" type="range" min="1" max="30" step="1">
+                <span class="fps-indicator">30</span>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="./index.js"></script>
+</body>
+</html>
